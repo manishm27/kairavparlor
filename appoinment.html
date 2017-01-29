@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kairav Beauty SPA</title>
+        <link rel="stylesheet" href="./styles.css"/>
+    </head>
+    <body>
+        <center>
+        <header>
+            <div class="header">
+                <nav>
+                    <div class="logo">
+                        <img class="logoimg" src="kairav.png" alt="HR Consultancy">
+                    </div>
+                    <div class="menu">
+                        <ul class="topnav" id="myTopnav" style="font-size: 90%">
+                            <li class="icon">
+                                <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
+                            </li>
+                            <li><a class="active" href="#home">Home</a></li>
+                            <li><a href="#news">Services</a></li>
+                            <li><a href="#contact">Courses</a></li>
+                            <li><a href="#news">About Us</a></li>
+                            <li><a href="#about">Feedback</a></li>
+                            <li><a href="#about">Contact</a></li>
+                            <li><a href="#about">Gallary</a></li>
+                            <li class="menubtnli"><button class="menubtn">Fix an Appoinment</button></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <div class="bodyContainer" style="text-align: left;padding: 10px;color:#777">
+            <center>
+                <img src="./fix.png" alt="">
+                <br><br>
+            <table cellpadding="0">
+                <tr>
+                    <td>Contact Name</td>
+                </tr>
+                <tr>
+                    <td><input type="text"></td>
+                </tr>
+                <tr style="height: 15px"></tr>
+                <tr>
+                    <td>Contact No.</td>
+                </tr>
+                <tr><td><input type="text"></td></tr>
+                <tr style="height: 15px"></tr>
+                <tr>
+                    <td>Service Required</td>
+                    
+                </tr>
+                <tr><td><textarea name="" id="" cols="30" rows="7"></textarea></td></tr>
+                <tr style="height: 15px"></tr>
+                <tr>
+                    <td>Service Date</td>
+                    
+                </tr>
+                <tr>
+                    <td>
+                        <select name="" id="">
+                            <option value="01">Day</option>
+                        </select>&nbsp;
+                        <select name="" id="">
+                            <option value="01">Month</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr style="height: 15px"></tr>
+            </table>
+            <br>
+            <button>Request Service</button>
+            </center>
+        </div>
+        <br/>
+        <footer>
+            <div class="footer">
+                <p style="color: white;text-align: left;margin-top: 7px;position: absolute;font-size: 80%;margin-left: 3px">&copy; 2016-17 kairav beauty salon</p>
+                <table style="float: right">
+                    <tr>
+                        <td style="color:white">Follow us on</td>
+                        <td><img style="max-width: 90%;height: auto;max-height: 90%;box-shadow: 1px 1px 1px 1px black;" src="./fb.png" alt=""></td>
+                        <td><img style="max-width: 90%;height: auto;max-height: 90%;box-shadow: 1px 1px 1px 1px black;" src="./twit.png" alt=""></td>
+                        <td><img style="max-width: 90%;height: auto;max-height: 90%;box-shadow: 1px 1px 1px 1px black;" src="./linkedin.png" alt=""></td>
+                    </tr>
+                </table>
+            </div>
+        </footer>
+        </center>
+        <script>
+            var i=1;
+            myFunction1();
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+            function myFunction1() {
+                if(i<3)
+                {
+                    setTimeout(function()
+                    { 
+                        document.getElementById('slid').src = "b"+i+".png";
+                        myFunction1();
+                    }
+                    , 3000);
+                    i++;
+                }
+                else
+                {
+                    i=1;
+                    document.getElementById('slid').src = "b"+i+".png";
+                        myFunction1();
+                }
+            }
+        </script>
+    </body>
+</html>

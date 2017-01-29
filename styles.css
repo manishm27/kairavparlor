@@ -1,0 +1,232 @@
+* {
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px;
+    margin: 0px;
+    background-image: url(texture.png);
+}
+
+.header
+{
+    height: 100px;
+    width: 100%;
+    background-color:#F8F9F9;
+    background-image: url(line.png);
+    position: fixed;
+    top:0;
+    margin: 0;
+    left:0;
+    border-top:3px solid #FD02DB;
+    border-bottom:1px solid #FD02DB;
+    box-sizing: border-box;
+}
+
+.menu
+{
+    height: 35px;
+    background-color: #FD02DB;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 3px 3px 3px 3px #777;
+}
+
+.logo
+{
+    width: 900px;
+}
+.logoimg
+{
+    width: 211px;
+    float: left;
+    height: 63px;
+    background-color: white;
+}
+.menubtnli{
+  float: right !important;
+}
+
+.menubtn{
+  margin-top: 7px;
+    margin-right: 4px;  
+}
+
+.bodyFooter{
+  min-height: 150px;
+  width: 900px;
+  /*position: absolute;*/
+}
+
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+  color: #777;
+  text-align: left;
+  font-size: 80%;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+
+/*  GROUPING  */
+.group:before,
+.group:after {
+	content:"";
+	display:table;
+}
+.group:after {
+	clear:both;
+}
+.group {
+    zoom:1; /* For IE 6/7 */
+}
+
+/*  GRID OF THREE  */
+.span_3_of_3 {
+	width: 100%;
+}
+.span_2_of_3 {
+	width: 66.1%;
+}
+.span_1_of_3 {
+	width: 32.2%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.col { margin: 1% 0 1% 0%;}
+	.span_3_of_3, .span_2_of_3, .span_1_of_3 { width: 100%; }
+}
+
+ul.topnav {
+  width: 900px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #FD02DB;
+}
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10.5px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 90%;
+}
+ul.topnav li a.active {
+    background-color: #777;
+}
+ul.topnav li a:hover {
+  background-color: #555;
+}
+
+ul.topnav li.icon {
+  display: none;
+}
+
+@media screen and (max-width:680px) {
+  .bodyFooter{
+  width: 100%;
+  }
+  .menubtnli{
+  float: left !important;
+  padding: 8px;
+  }
+  .menubtn{
+    margin-top: 4px;
+    margin-left: 6px;
+  }
+  ul.topnav li {
+    display: none;
+  }
+  ul.topnav li.icon {
+    display: inline-block;
+  }
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+.bodyContainer{
+  min-height: 600px;
+  width: 900px;
+  margin-top: 100px;
+  z-index: -1;
+  box-shadow: 1px 1px 3px 3px #777;
+  background-color: white;
+}
+
+.footer{
+  width: 100%;
+  height: 30px;
+  background-color: #FD02DB;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+}
+
+@media screen and (max-width:899px) {
+  .bodyContainer{
+    width: 100%;
+    height: auto;
+  }
+  ul.topnav {
+    width: 100%;
+  }
+}
+
+.navigtor
+{
+    width: 700px;
+    max-width: 100%;
+    height: auto;
+    /*box-shadow: 1px 1px 1px 1px #777;*/
+}
+
+.prev, .next {
+  cursor: pointer;
+  width: auto;
+  color: #777;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+.prev{
+  float: left;
+  margin-left: 10px;
+}
+
+/* Position the "next button" to the right */
+.next {
+  margin-right: 10px;
+  float: right;
+  border-radius: 3px 0 0 3px;
+}
